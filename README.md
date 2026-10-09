@@ -46,35 +46,3 @@ eas build --platform ios --profile preview
 eas build --platform android --profile production
 eas build --platform ios --profile production
 ```
-
-## 🚀 Deploy
-Para fazer o deploy do aplicativo para as lojas, utilize os seguintes comandos:
-
-##### iOS:
-```bash
-eas submit --platform ios --profile production
-```
-
-##### Android — Internal Testing (build + submit em um comando):
-```bash
-eas build --platform android --profile preview --auto-submit
-```
-Sobe o AAB no track `internal` do Play Console como **draft release** (rascunho). A Service Account usada é `eas-play-publisher@caruanasvaa-app.iam.gserviceaccount.com`, gerenciada via `eas credentials -p android`.
-
-Para os testers receberem o build, é necessário promover o rascunho manualmente no Play Console:
-
-1. https://play.google.com/console → app **Caruanas Va'a**
-2. Menu lateral: **Test and release → Testing → Internal testing**
-3. Aba **Releases**, clique em **Edit release** no draft que apareceu com o `versionCode` novo
-4. Preencha **Release notes** em `pt-BR` (campo `<pt-BR>...</pt-BR>`)
-5. **Save** → **Next** → **Save and review release** → **Start rollout to Internal testing**
-
-Após o rollout, os testers internos recebem a atualização em alguns minutos.
-
-> Por que draft? O Play Console rejeita submissões com status `completed` que não trazem release notes. O fluxo de draft mantém o build automatizado e deixa as notas para o passo final manual — que naturalmente envolve descrever o que mudou.
-
-##### Android — Produção:
-```bash
-eas build --platform android --profile production --auto-submit
-```
-O profile `production` em `eas.json` usa `releaseStatus: completed` e exige release notes pré-configuradas (ainda não automatizadas — preencha no Play Console no fluxo de release ou adicione `releaseNotes` em `submit.production.android` antes de rodar).
