@@ -1,0 +1,57 @@
+{
+  "cli": {
+    "version": ">= 16.15.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "environment": "preview"
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "environment": "production"
+    },
+    "simulator": {
+      "extends": "production",
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "environment": "production",
+      "env": {
+        "EXPO_PUBLIC_SCREENSHOT_MODE": "1",
+        "EXPO_PUBLIC_SCREENSHOT_EMAIL": "revisor.loja@lepoti.tech",
+        "EXPO_PUBLIC_SCREENSHOT_PASSWORD": "RevisaoLoja@2026"
+      }
+    }
+  },
+  "submit": {
+    "preview": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    },
+    "production": {
+      "android": {
+        "track": "production",
+        "releaseStatus": "completed"
+      },
+      "ios": {
+        "ascAppId": "6748928194"
+      }
+    }
+  }
+}

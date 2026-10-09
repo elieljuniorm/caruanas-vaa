@@ -1,0 +1,41 @@
+ABOUT THE APP
+Caruanas Va'a is the member app of an outrigger canoe (va'a) club in Belem, Brazil. A canoe seats a fixed number of paddlers, so each session has a hard attendance limit: members use the app to reserve their seat (check-in), follow their attendance and fees, keep their health declaration up to date and read club news. Instructors confirm attendance; the administration manages classes, plans, members and billing.
+
+DEMO ACCOUNTS
+Member: revisor.loja@lepoti.tech / <<SENHA_ALUNO>>
+Instructor: revisor.instrutor@lepoti.tech / <<SENHA_INSTRUTOR>>
+Administrator: revisor.admin@lepoti.tech / <<SENHA_ADMIN>>
+No public sign-up, so we provide one account per role. To switch, use "Sair" (sign out) in the side menu.
+
+WALKTHROUGH (member account)
+1. Inicio (home): next class, fee status, club news.
+2. Treino (training): tap "Fazer Check-In" to reserve a seat. Check-in is only open inside a window set by the club; the class "Canoagem - Turma Demonstracao" has an always-open window, so you can check in at any time and from any time zone. "Cancelar check-in" undoes it.
+3. Faturas (fees): one open fee of R$ 1.00. "Pagar" opens the Mercado Pago page in the browser. Payment is NOT required for the review.
+4. Perfil (profile) > medical icon: health declaration. Under the Brazilian data protection law (LGPD) a separate, explicit consent is required before it can be submitted; submission is blocked without it - expected behaviour, not a failure.
+5. Side menu > Privacidade: privacy policy and terms, "Baixar meus dados" (export all personal data), withdraw the health-data consent, and "Solicitar exclusao de dados" (request account and data deletion).
+Instructor: confirms attendance, consults health declarations. Administrator: manages classes, schedules, plans, sessions, member accounts and fees.
+
+ACCOUNT CREATION AND DELETION
+No public sign-up: accounts are created by the club's administration on behalf of its members. Inside the app the administrator both creates (Usuarios > Cadastrar) and deletes (Usuarios > delete) member accounts. A member can request deletion of their account and data in Privacidade > "Solicitar exclusao de dados", which opens a pre-filled message to our data protection officer (dpo@lepoti.tech).
+
+USER-GENERATED CONTENT
+None. Members cannot post content; there is no chat, no comments and no profiles visible to other members. "Noticias" is published by the club's administration only, so no reporting or blocking mechanism is required.
+
+PAYMENTS
+The only payment is the club's monthly membership fee for in-person canoe training at a physical location - a real-world service, outside the scope of in-app purchase (Guideline 3.1.3(e)). It is processed by Mercado Pago in the browser. No digital content or service is sold in the app.
+
+EXTERNAL SERVICES
+Our own backend API (https://iako.lepoti.tech), hosted in Sao Paulo, Brazil, behind Cloudflare; Mercado Pago for fee payments; Expo Push Notification Service with APNs; Sentry for crash reporting. No AI services, no advertising, no analytics or tracking SDKs, no third-party sign-in, no data brokers.
+
+REGIONAL DIFFERENCES
+None. The app behaves identically in every region. Interface in Brazilian Portuguese; class times in the club's local time (UTC-3).
+
+REGULATED INDUSTRY
+None. This is a sports club membership app; it provides no medical service or advice. It does collect a health self-declaration and, optionally, a medical certificate from the member's own physician, which the club requires before physical activity. Under the LGPD, consent for health data is asked separately from the terms and privacy policy, the server refuses the declaration without it, and the data is encrypted at rest (AES-256-GCM).
+
+PERMISSIONS
+Camera and photos: profile picture only. Documents: medical certificate PDF. No location is collected.
+
+Privacy policy: https://lepoti.tech/poti-clubes/privacidade/
+Terms of use: https://lepoti.tech/poti-clubes/termos/
+Data protection officer: dpo@lepoti.tech

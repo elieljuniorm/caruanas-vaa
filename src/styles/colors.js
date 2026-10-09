@@ -1,0 +1,58 @@
+export const colors = {
+    primary: '#FFFFFFFF',
+    secondary: '#FFFFFF6E',
+
+    icon: '#FFFFFFFF',
+    iconActive: '#FFFFFF6E',
+
+    textIcon: '#FFFFFFFF',
+    textIconActive: '#FFFFFF6E',
+
+    textWhite: '#ffffff',
+    textWhiteTransparent: '#D9D9D9',
+    textOrange: '#F24022',
+    textDisebled: '#B0B0B0',
+    textWhiteDark: '#767676',
+    textDivder: 'rgba(255, 255, 255, 0.5)',
+    textRed: '#EF3434',
+    textGrey: '#CCCCCC',
+    textGreen: '#4CAF50',
+
+    background: '#000000FF',
+    backgroundWhite: '#FFFFFF',
+    backgroundTransparent: '#2A2C2CE0',
+    backgroundOrange: '#F24022',
+    backgroundBlueButton: '#0449C9',
+    backgroundBlack: '#000000',
+    backgroundGreenButton: '#007F00',
+    backgroundRedButton: '#FE0000',
+    backgroundLineDivider: 'rgba(255, 255, 255, 0.5)',
+    backgroundCardBlack: '#1E1E1E',
+    backgroundCard: '#2D2D2D',
+    backgroundmodalOverlay: 'rgba(0, 0, 0, 0.7)',
+    backgroundSave: '#007F00',
+    backgroundCancel: '#FE0000',
+    backgroundIconGreen: '#00DD00',
+    backgroundCheckInButton: 'rgba(0, 127, 0, 0.8)',
+    backgroundCheckInButtonCancel: 'rgba(254, 0, 0, 0.8)',
+
+    boxShadow: 'rgba(0, 0, 0, 0.5)',
+
+    switchOn: '#0D6EFD',
+    switchOff: '#BFBFBF',
+    switchTrackOn: '#FFFFFF',
+    switchTrackOff: '#DFDFDF',
+
+    fontUserDrawer: 20,
+    fontItensDrawer: 20,
+    fontButtonFooterDrawer: 15,
+
+    fontP12: 12,
+    fontP14: 14,
+    fontP16: 16,
+    fontP18: 18,
+    fontP20: 20,
+    fontP22: 22,
+    fontP24: 24,
+    fontP28: 28,
+};

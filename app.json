@@ -1,0 +1,94 @@
+{
+  "expo": {
+    "name": "Caruanas Va'a",
+    "slug": "caruanas-app",
+    "version": "1.0.1",
+    "runtimeVersion": "1.0.0",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "tech.lepoti.caruanasvaa",
+      "deploymentTarget": "16.0",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "entitlements": {
+        "aps-environment": "production"
+      },
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "O Caruanas Va'a precisa da câmera para tirar a foto do seu perfil.",
+        "NSPhotoLibraryUsageDescription": "O Caruanas Va'a precisa acessar suas fotos para definir foto de perfil e anexar laudo médico em PDF.",
+        "NSFaceIDUsageDescription": "Use o Face ID para entrar mais rápido no Caruanas Va'a.",
+        "NSUserNotificationUsageDescription": "Receba avisos sobre suas aulas, convites e cobranças."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "tech.lepoti.caruanasvaa",
+      "minSdkVersion": 28,
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "CAMERA",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/adaptive-icon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "@react-native-community/datetimepicker",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/adaptive-icon.png",
+          "color": "#FF8C00"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O Caruanas Va'a precisa acessar suas fotos para foto de perfil e laudo médico.",
+          "cameraPermission": "O Caruanas Va'a precisa da câmera para foto de perfil.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Use o Face ID para entrar mais rápido no Caruanas Va'a."
+        }
+      ]
+    ],
+    "updates": {
+      "url": "https://u.expo.dev/0ce82553-d308-4661-b304-dfab701f30aa"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0ce82553-d308-4661-b304-dfab701f30aa"
+      }
+    }
+  }
+}
